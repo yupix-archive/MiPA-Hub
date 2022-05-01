@@ -23,12 +23,9 @@ Released: [2022-04-27](https://pypi.org/project/mipac/0.0.2/)
 
 Released: [2022-04-27](https://pypi.org/project/mipa/0.0.2/)
 
-+++ New :icon-shield-check:
-
-- [x] `__all__` の定義
-
 +++ Fixed :icon-bug:
-
+- [x] 不要な依存関係の削除
+- [x] 属性名を正しいものに修正
 +++
 
 ## MiPAC v0.0.1
