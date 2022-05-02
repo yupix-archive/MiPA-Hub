@@ -2,9 +2,13 @@
 
 データモデルはMiPAの`User`クラスなどを指します
 
-
+!!!danger
+基本的にこれらのクラスはユーザーによって作成されることを考慮しておらず、[Type Hints](https://peps.python.org/pep-0484/) で使うことを想定しています
+!!!
 
 ## User
+
+**import** `from mipac.models import User`
 
 |name|type|description|
 |---|---|---|
@@ -43,11 +47,13 @@
 |is_blocking|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーをブロックしているか|
 |is_blocked|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーにブロックされてるか|
 |is_muted|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーをミュートしているか|
-|details|[!badge variant="info" text="RawUserDetails"](/guides/rawmodels/#rawuserdetails)|ユーザーの詳細情報|
+|details|[!badge variant="info" text="RawUserDetails"](/api/rawmodels/#rawuserdetails)|ユーザーの詳細情報|
 |instance|[!badge variant="info" text="Optional[Instance]"](#instance) [!badge variant="primary" text="Default: None"]|ユーザーのインスタンス情報|
 
 
 ## Instance
+
+**import** `from mipac.models import Instance`
 
 |name|type|description|
 |---|---|---|
@@ -60,6 +66,8 @@
 |theme_color|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|インスタンスの色|
 
 ## Note
+
+**import** `from mipac.models import Note`
 
 |name|type|description|
 |---|---|---|

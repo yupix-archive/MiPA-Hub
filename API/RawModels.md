@@ -1,6 +1,28 @@
+# RawModels
+
+生のデータモデルは`.action`などの動作を持たないデータクラスです
+
+!!!danger
+基本的にこれらのクラスはユーザーによって新規に作成されることを想定していません。
+正常に動作しない場合があることを予めご了承ください。
+!!!
+
 ## ユーザー関連
 
 ### RawUser
+
++++ :icon-code: Source
+```py
+from mipac.core.models import RawUser
+
+user = RawUser(data)
+print(user.id)
+```
++++ :icon-play: Demo
+```bash
+>>> 1234567890
+```
++++
 
 |name|type|description|
 |---|---|---|
@@ -39,10 +61,12 @@
 |is_blocking|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーをブロックしているか|
 |is_blocked|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーにブロックされてるか|
 |is_muted|[!badge variant="info" text="bool"] [!badge variant="primary" text="Default: False"]|ユーザーをミュートしているか|
-|details|[!badge variant="info" text="RawUserDetails"](/guides/rawmodels/#rawuserdetails)|ユーザーの詳細情報|
+|details|[!badge variant="info" text="RawUserDetails"](/api/rawmodels/#rawuserdetails)|ユーザーの詳細情報|
 |instance|[!badge variant="info" text="Optional[RawInstance]"](#rawinstance) [!badge variant="primary" text="Default: None"]|ユーザーのインスタンス情報|
 
 ### RawUserDetails
+
+**import** `from mipac.core.models import RawUserDetails`
 
 |name|type|description|
 |---|---|---|
@@ -62,6 +86,8 @@
 
 ### RawInstance
 
+**import** `from mipac.core.models import RawInstance`
+
 |name|type|description|
 |---|---|---|
 |host|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|インスタンスのホスト|
@@ -75,6 +101,8 @@
 ## 投稿関連
 
 ### RawRenotes
+
+**import** `from mipac.core.models import RawRenotes`
 
 |name|type|description|
 |---|---|---|
@@ -98,6 +126,8 @@
 
 ### RawReaction
 
+**import** `from mipac.core.models import RawReaction`
+
 |name|type|description|
 |---|---|---|
 |id|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|リアクションを付けた際のイベントID|
@@ -110,6 +140,8 @@
 
 ### RawNoteReaction
 
+**import** `from mipac.core.models import RawNoteReaction`
+
 |name|type|description|
 |---|---|---|
 |id|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|リアクションを付けた際のイベントID|
@@ -118,6 +150,8 @@
 |reaction|[!badge variant="info" text="str"]|リアクション|
 
 ### RawNote
+
+**import** `from mipac.core.models import RawNote`
 
 |name|type|description|
 |---|---|---|
