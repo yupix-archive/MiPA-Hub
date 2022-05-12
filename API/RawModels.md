@@ -111,10 +111,10 @@ print(user.id)
 |user_id|[!badge variant="info" text="str"]|リノートしたユーザーのID|
 |user|[!badge variant="info" text="RawUser"](#rawuser)|リノートした生のユーザーオブジェクト|
 |content|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|リノートの内容|
-|cw|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|閲覧注意時の文字 [!badge variant="danger" text="要修正"]|
+|cw|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|閲覧注意時の文字|
 |visibility|[!badge variant="info" text="str"] [!badge variant="primary" text="Default: None"]|ノートの公開範囲|
-|renote_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: 0"]|リノートされた数 [!badge variant="danger" text="要修正"]|
-|replies_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: 0"]|ノートに対する返信の数 [!badge variant="danger" text="要修正"]|
+|renote_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: 0"]|リノートされた数|
+|replies_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: 0"]|ノートに対する返信の数|
 |reactions|[!badge variant="info" text="Dict[str, Any]"]|投稿に付いたリアクションのリスト|
 |emojis|[!badge variant="info" text="Any"]|投稿に含まれる絵文字のリスト [!badge variant="danger" text="要修正"]|
 |file_ids|[!badge variant="info" text="Optional[List[str]]"] [!badge variant="primary" text="Default: None"]|添付されたファイルのIDリスト|
@@ -163,8 +163,8 @@ print(user.id)
 |cw|[!badge variant="info" text="Optional[str]"] [!badge variant="primary" text="Default: None"]|閲覧注意時の文字|
 |renote|[!badge variant="info" text="Optional[Renote]"] [!badge variant="primary" text="Default: None"]|リノートしたオブジェクト|
 |visibility|[!badge variant="info" text="str"] [!badge variant="primary" text="Default: None"]|ノートの公開範囲|
-|renote_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: None"]|リノートされた数 [!badge variant="danger" text="要修正"]|
-|replies_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: None"]|ノートに対する返信の数 [!badge variant="danger" text="要修正"]|
+|renote_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: None"]|リノートされた数|
+|replies_count|[!badge variant="info" text="Optional[int]"] [!badge variant="primary" text="Default: None"]|ノートに対する返信の数|
 |reactions|[!badge variant="info" text="Dict[str, Any]"]|投稿に付いたリアクションのリスト|
 |emojis|[!badge variant="info" text="List[RawEmoji]"] [!badge variant="primary" text="Default: \[\]"]|投稿に含まれる絵文字のリスト|
 |file_ids|[!badge variant="info" text="Optional[List[str]]"] [!badge variant="primary" text="Default: None"]|添付されたファイルのIDリスト|
