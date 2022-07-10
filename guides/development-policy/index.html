@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>QuickStart</title>
-    <meta name="title" content="QuickStart">
-    <meta name="description" content="このコードを簡潔に紹介しますと、以下のようになります" />
+    <title>開発方針</title>
+    <meta name="title" content="開発方針">
+    <meta name="description" content="このページではMiPAとMiPACの開発方針を記載しています" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/guides/quickstart/" />
+    <link rel="canonical" href="/guides/development-policy/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/guides/quickstart/">
-    <meta property="og:title" content="QuickStart">
-    <meta property="og:description" content="このコードを簡潔に紹介しますと、以下のようになります">
+    <meta property="og:url" content="/guides/development-policy/">
+    <meta property="og:title" content="開発方針">
+    <meta property="og:description" content="このページではMiPAとMiPACの開発方針を記載しています">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/guides/quickstart/">
-    <meta property="twitter:title" content="QuickStart">
-    <meta property="twitter:description" content="このコードを簡潔に紹介しますと、以下のようになります">
+    <meta property="twitter:url" content="/guides/development-policy/">
+    <meta property="twitter:title" content="開発方針">
+    <meta property="twitter:description" content="このページではMiPAとMiPACの開発方針を記載しています">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -35,7 +35,6 @@
     <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.710785686998" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.710785686998" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.710785686998" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -181,68 +180,37 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="quickstart" class="break-words">
+<doc-anchor-target id="開発方針" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#quickstart">#</doc-anchor-trigger>
-        <span>QuickStart</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#開発方針">#</doc-anchor-trigger>
+        <span>開発方針</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="mipamipacを使用したbotの作り方">
+<p>このページではMiPAとMiPACの開発方針を記載しています</p>
+<doc-anchor-target id="リポジトリについて">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mipamipacを使用したbotの作り方">#</doc-anchor-trigger>
-        <span>MiPA/MiPACを使用したBotの作り方</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#リポジトリについて">#</doc-anchor-trigger>
+        <span>リポジトリについて</span>
     </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">main.py</div>
-<pre class="language-python"><code v-pre class="language-python">import asyncio
-
-from mipa.ext import commands
-from mipa.router import Router
-from mipac.models import Note
-
-class MyBot(commands.Bot):
-    def __init__(self):
-        super().__init__()
-    
-    async def on_ready(self, ws):
-        await Router(ws).connect_channel([&quot;global&quot;, &quot;main&quot;])
-    
-    async def on_message(self, note: Note)
-        print(note.author.name, note.content)
-
-if __name__ == '__main__':
-    bot = MyBot()
-    asyncio.run(bot.start(url, token))</code></pre>
-</doc-codeblock></div>
-<p>このコードを簡潔に紹介しますと、以下のようになります</p>
-<ol>
-<li>MyBotクラスをインスタンス化し、bot変数に入れる</li>
-<li>bot.start時にインスタンスのurl（wss://example.comやhttps://example.com）とBotにしたいユーザーのTokenを入れる</li>
-<li>起動すると<code v-pre>on_ready</code> イベントが呼ばれる為、その際にRouterクラスを用いて受け取りたい情報をBotに伝える</li>
-<li>3の手順で接続したチャンネル（今回ならグローバルタイムラインと自信に関する通知）に投稿があった場合、<code v-pre>on_message</code> イベントが呼ばれる</li>
-</ol>
-<doc-anchor-target id="mipacを用いたapi通信の例">
+<p>メインリポジトリは開発中のコミットが確実にあります。GitHubはミラーとして使用しているため、確実に最新のデータであることを保証することはできません</p>
+<p>メインリポジトリ</p>
+<ul>
+<li><a href="https://code.teamblackcrystal.com/projects/121">MiPA</a></li>
+<li><a href="https://code.teamblackcrystal.com/projects/120">MiPAC</a></li>
+</ul>
+<p>ミラーリポジトリ</p>
+<ul>
+<li><a href="https://github.com/yupix/MiPA">MiPA</a></li>
+<li><a href="https://github.com/yupix/MiPAC">MiPAC</a></li>
+</ul>
+<doc-anchor-target id="リリースサイクル">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mipacを用いたapi通信の例">#</doc-anchor-trigger>
-        <span>MiPACを用いたAPI通信の例</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#リリースサイクル">#</doc-anchor-trigger>
+        <span>リリースサイクル</span>
     </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">main.py</div>
-<pre class="language-python"><code v-pre class="language-python">import asyncio
-
-from mipac.client import Client
-
-async def main():
-    client = Client(url, token)
-    await client.http.login()
-    note = await client.action.note.action.send('Hello World')
-    print(note.author.name, note.content)
-
-if __name__ == '__main__':
-    asyncio.run(main())</code></pre>
-</doc-codeblock></div>
+<p>不定期リリースです</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -252,20 +220,20 @@ if __name__ == '__main__':
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../guides/mipy-to-mipa/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../guides/warning/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Mi.​py から Mi​PA への移行</span>
+                                                <span class="block mt-1">注意点</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../guides/warning/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../roadmap/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">注意点</span>
+                                                <span class="block mt-1">Roadmap</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -309,6 +277,6 @@ if __name__ == '__main__':
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "QuickStart", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "開発方針", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
