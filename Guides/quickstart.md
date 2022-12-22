@@ -12,12 +12,12 @@ from mipac.models import Note
 class MyBot(commands.Bot):
     def __init__(self):
         super().__init__()
-    
+
     async def on_ready(self, ws):
         await Router(ws).connect_channel(["global", "main"])
-    
-    async def on_message(self, note: Note)
-        print(note.author.name, note.content)
+
+    async def on_message(self, note: Note):
+        print(note.author.username, note.content)
 
 if __name__ == '__main__':
     bot = MyBot()
@@ -41,8 +41,8 @@ from mipac.client import Client
 async def main():
     client = Client(url, token)
     await client.http.login()
-    note = await client.action.note.action.send('Hello World')
-    print(note.author.name, note.content)
+    note = await client.api.note.action.send('Hello World')
+    print(note.author.username, note.content)
 
 if __name__ == '__main__':
     asyncio.run(main())
