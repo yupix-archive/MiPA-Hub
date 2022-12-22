@@ -17,7 +17,7 @@ class MyBot(commands.Bot):
         await Router(ws).connect_channel(["global", "main"])
 
     async def on_message(self, note: Note):
-        print(note.author.nickname, note.content)
+        print(note.author.username, note.content)
 
 if __name__ == '__main__':
     bot = MyBot()
@@ -42,7 +42,7 @@ async def main():
     client = Client(url, token)
     await client.http.login()
     note = await client.api.note.action.send('Hello World')
-    print(note.author.nickname, note.content)
+    print(note.author.username, note.content)
 
 if __name__ == '__main__':
     asyncio.run(main())
