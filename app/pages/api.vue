@@ -31,10 +31,10 @@
                                     <n-h3 style="margin: 0 !important;">Attributes</n-h3>
 
                                     <n-anchor :show-rail="true" :show-background="true">
-                                        <div v-for="_attribute in _class.attributes">
+                                        <div v-for="_attribute in _class.attributes" style="display: flex;">
                                             <n-anchor-link
                                                 :title="(_attribute.is_property ? '@' : '') + _attribute.name"
-                                                href="#Demos" />
+                                                :href="`#${_attribute.name}`" />
                                         </div>
                                     </n-anchor>
                                 </n-gi>
@@ -45,7 +45,7 @@
                                         <div v-for="_method in _class.methods">
                                             <n-anchor-link
                                                 :title="(_method.is_async ? 'async' : 'def') + ' ' + _method.name"
-                                                href="#Demos" />
+                                                :href="`#${_method.name}`" />
                                         </div>
                                     </n-anchor>
                                 </n-gi>
