@@ -1,0 +1,28 @@
+[
+    {
+        "name": "str",
+        "is_external": true,
+        "link": "https://docs.python.org/3/library/stdtypes.html#str"
+    },
+    {
+        "name": "int",
+        "is_external": true,
+        "link": "https://docs.python.org/3/library/stdtypes.html#int"
+    },
+    {
+        "name": "None",
+        "is_external": true,
+        "link": "https://docs.python.org/3/library/stdtypes.html#the-null-object"
+    },
+    {
+        "name": "datetime",
+        "is_external": true,
+        "link": "https://docs.python.org/3/library/datetime.html#datetime.datetime"
+    },
+    {
+        "name": "typing.Optional",
+        "is_external": true,
+        "link": "https://docs.python.org/3/library/typing.html#typing.Optional"
+    }
+
+]

@@ -1,0 +1,11 @@
+{
+    "api" :{
+        "title": {
+            "description": "説明",
+            "parameter": "パラメータ",
+            "exception": "例外",
+            "return_value": "戻り値",
+            "return_type": "戻り値の型"
+        }
+    }
+}

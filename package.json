@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "PORT=40000 nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "naive-ui": "^2.34.3",
+    "netlify-cli": "^13.1.2",
+    "nuxt": "^3.1.2",
+    "sass": "^1.58.0"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "8.0.0-beta.9",
+    "@vueuse/core": "^9.12.0"
+  }
+}
